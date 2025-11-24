@@ -1,0 +1,22 @@
+nuoc.png
+size:1952,1216
+filter:Linear,Linear
+scale:0.6
+bot trang
+bounds:1452,222,24,24
+bot xanh
+bounds:1184,97,25,25
+may1
+bounds:2,2,1180,314
+may2
+bounds:1452,248,173,68
+may3
+bounds:1184,221,266,95
+may4
+bounds:1184,124,266,95
+nuoc1
+bounds:2,318,648,895
+nuoc2
+bounds:652,318,648,895
+nuoc3
+bounds:1302,318,648,895

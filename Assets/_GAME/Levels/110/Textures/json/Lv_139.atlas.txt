@@ -1,0 +1,137 @@
+Lv_139.png
+size:2048,2024
+filter:Linear,Linear
+pma:true
+scale:0.8
+bot trang
+bounds:492,1989,32,32
+bot xanh
+bounds:526,1987,34,34
+ca1
+bounds:1160,1951,116,70
+ca10
+bounds:964,1959,98,62
+ca11
+bounds:694,1884,89,96
+rotate:90
+ca12
+bounds:387,1914,96,82
+ca13
+bounds:1385,1949,96,72
+ca14
+bounds:2,1928,84,75
+ca15
+bounds:582,1900,110,85
+ca16
+bounds:1703,1947,110,74
+ca17
+bounds:485,1903,82,95
+rotate:90
+ca18
+bounds:302,1915,83,82
+ca19
+bounds:792,1884,98,89
+ca2
+bounds:1815,1947,94,74
+ca20
+bounds:1579,1948,122,73
+ca21
+bounds:1904,1806,140,139
+ca22
+bounds:428,1770,187,128
+ca23
+bounds:346,1618,191,150
+ca3
+bounds:1278,1951,105,70
+ca4
+bounds:1483,1949,94,72
+ca5
+bounds:1064,1957,94,64
+ca6
+bounds:180,1917,120,80
+ca7
+bounds:1747,1682,162,145
+rotate:90
+ca8
+bounds:88,1926,90,76
+ca9
+bounds:1911,1947,92,74
+may1
+bounds:2,1198,1574,418
+may2
+bounds:892,1865,230,90
+may3
+bounds:1033,1719,355,127
+may4
+bounds:1390,1717,355,127
+meo1_can cau
+bounds:617,1741,206,141
+meo1_chan phai
+bounds:716,1975,67,46
+meo1_dau
+bounds:2,1668,170,143
+meo1_duoi
+bounds:562,1987,75,34
+meo1_mat mo
+bounds:186,1999,61,22
+meo1_mat nham
+bounds:52,2005,68,16
+meo1_mieng
+bounds:122,2004,30,17
+meo1_mu
+bounds:2,1813,211,102
+meo1_mui
+bounds:2,2013,14,8
+meo1_tay phai
+bounds:785,1975,53,46
+meo1_tay trai
+bounds:390,1998,23,49
+rotate:90
+meo1_than
+bounds:1124,1850,133,99
+meo1_thuyen
+bounds:1259,1848,253,99
+meo2_can cau
+bounds:825,1722,206,141
+meo2_chan phai
+bounds:840,1975,67,46
+meo2_dau
+bounds:174,1665,170,143
+meo2_duoi
+bounds:639,1987,75,34
+meo2_mat mo
+bounds:249,1999,61,22
+meo2_mat nham
+bounds:312,1999,76,22
+meo2_mieng1
+bounds:154,2004,30,17
+meo2_mieng2
+bounds:34,2008,16,13
+meo2_mu
+bounds:215,1810,211,102
+meo2_mui
+bounds:18,2013,14,8
+meo2_tay phai
+bounds:909,1975,53,46
+meo2_tay trai
+bounds:441,1998,23,49
+rotate:90
+meo2_than
+bounds:1514,1847,133,99
+meo2_thuyen1
+bounds:1649,1846,253,99
+nuoc1
+bounds:1011,2,866,1194
+sanho1
+bounds:2,635,1007,561
+
+Lv_139_2.png
+size:1880,1648
+filter:Linear,Linear
+pma:true
+scale:0.8
+BG
+bounds:2,778,866,1874
+rotate:90
+sanho2
+bounds:2,2,1318,774

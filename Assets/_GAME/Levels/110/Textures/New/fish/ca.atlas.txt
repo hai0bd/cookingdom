@@ -1,0 +1,16 @@
+ca.png
+size:828,572
+filter:Linear,Linear
+scale:2.0
+ca_1
+bounds:572,368,254,202
+ca_2
+bounds:298,26,272,182
+ca_3
+bounds:2,30,294,178
+ca_4
+bounds:572,2,240,168
+ca_5
+bounds:572,172,244,194
+ca_map
+bounds:2,210,568,360
