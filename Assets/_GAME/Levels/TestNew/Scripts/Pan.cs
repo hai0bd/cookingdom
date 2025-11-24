@@ -1,7 +1,5 @@
 using Link;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Hai.Cooking.NewTest
@@ -12,6 +10,7 @@ namespace Hai.Cooking.NewTest
         {
             Normal,
             HeatOn,
+            HaveOil,
             HaveOnion,
             HaveGarlic,
             Mixing,
@@ -38,6 +37,9 @@ namespace Hai.Cooking.NewTest
                 case State.HeatOn:
                     
                     break;
+                case State.HaveOil:
+
+                    break;
                 case State.HaveOnion:
                     break;
                 case State.HaveGarlic:
@@ -45,11 +47,18 @@ namespace Hai.Cooking.NewTest
                 case State.Mixing:
                     break;
                 case State.WaitForTurnOff:
+                    //smoke.VFX.Stop();
+                    WaitForTurnOff();
                     break;
                 case State.Done:
                     OnDoneCooking();
                     break;
             }
+        }
+
+        private void WaitForTurnOff()
+        {
+            
         }
 
         private void OnDoneCooking()
