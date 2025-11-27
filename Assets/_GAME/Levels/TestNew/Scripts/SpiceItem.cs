@@ -15,8 +15,10 @@ namespace Hai.Cooking.NewTest
         [SerializeField] private State state;
         [SerializeField] private SpiceType spiceType;
 
-        [SerializeField] private Animation anim;
-        [SerializeField] private string animPouring;
+        //[SerializeField] private Animation anim;
+        //[SerializeField] private string animPouring;
+
+        [SerializeField] private PouringAnim pouringAnim;
 
         public override bool IsCanMove => IsState(State.Normal);
         public override bool IsState<T>(T t)
@@ -66,14 +68,16 @@ namespace Hai.Cooking.NewTest
 
         private void StartPouring()
         {
-            anim.Play(animPouring);
+            //anim.Play(animPouring);
             //SoundControl.Ins.PlayFX()
+            pouringAnim.PutUp();
             StartCoroutine(WaitForPouring());
         }
 
         private IEnumerator WaitForPouring()
         {
             yield return new WaitForSeconds(1.5f);
+            pouringAnim.PutDown();
             ChangeState(State.Done);
         }
     }

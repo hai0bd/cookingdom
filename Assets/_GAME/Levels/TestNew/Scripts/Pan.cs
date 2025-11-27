@@ -1,3 +1,4 @@
+using DG.Tweening;
 using Link;
 using System;
 using System.Collections;
@@ -29,6 +30,14 @@ namespace Hai.Cooking.NewTest
         [SerializeField] private Drop2D garlicDrop;
         [SerializeField] private Drop2D onionDrop;
 
+        [SerializeField] private GameObject heatOn;
+        [SerializeField] private GameObject haveOil;
+        [SerializeField] private GameObject haveGarlic;
+        [SerializeField] private GameObject haveOnion;
+        [SerializeField] private GameObject haveMeat;
+        [SerializeField] private GameObject haveSalt;
+        [SerializeField] private GameObject havePepper;
+
         [SerializeField] private ItemAlpha rawMeatAlpha;
         [SerializeField] private ItemAlpha mixMeatAlpha;
         [SerializeField] private ItemAlpha cookedMeatAlpha;
@@ -57,19 +66,24 @@ namespace Hai.Cooking.NewTest
                 case State.Normal:
                     break;
                 case State.HeatOn:
-                    Debug.Log("Heat On");
+                    DOVirtual.DelayedCall(1f, () => { heatOn.SetActive(true); });
                     break;
                 case State.HaveOil:
-                    // play aim
-                    // play sound
+                    DOVirtual.DelayedCall(1f, () => {haveOil.SetActive(true);});
                     break;
                 case State.HaveGarlic:
+                    DOVirtual.DelayedCall(1f, () => {haveGarlic.SetActive(true);});
                     garlicDrop.OnActive();
                     break;
+                case State.HaveMeat:
+                    DOVirtual.DelayedCall(1f, () => {haveMeat.SetActive(true);});
+                    break;
                 case State.HaveOnion:
+                    DOVirtual.DelayedCall(1f, () => {haveOnion.SetActive(true);});
                     onionDrop.OnActive();
                     break;
                 case State.HavePepper:
+                    DOVirtual.DelayedCall(1f, () => {havePepper.SetActive(true);});
                     ChangeState(State.Mixing);
                     break;
                 case State.Mixing:

@@ -28,6 +28,8 @@ namespace Hai.Cooking.NewTest
 
         private void Awake()
         {
+            StepCook.OnLevelEnd += OnEnd;
+
             if (onActive)
             {
                 targetPos = transform.position;
@@ -70,7 +72,7 @@ namespace Hai.Cooking.NewTest
             //transform.DORotate(new Vector3(0, 0, -360), duration, RotateMode.FastBeyond360).SetEase(Ease.OutBack);
         }
 
-        public void OnDestroy()
+        public void OnEnd()
         {
             if (onDisable)
             {
@@ -79,6 +81,7 @@ namespace Hai.Cooking.NewTest
                 transform.DOMove(endPos, duration).SetEase(Ease.InBack).SetDelay(delay);
                 transform.DOScale(0f, duration).SetEase(Ease.InBack).SetDelay(delay);
             }
+            StepCook.OnLevelEnd -= OnEnd;
         }
     }
 }

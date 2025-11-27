@@ -1,4 +1,5 @@
 using Link;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,9 @@ namespace Hai.Cooking.NewTest
     {
         [SerializeField] private Pan pan;
         [SerializeField] private Sprite hint_prepare, hint_fry, hint_done;
+
+        public static event Action OnLevelEnd;
+
 
         public override void NextHint()
         {
@@ -29,6 +33,7 @@ namespace Hai.Cooking.NewTest
         {
             if(pan.IsState(Pan.State.Done))
             {
+                OnLevelEnd.Invoke();
                 return true;
             }
             return false;
