@@ -1,4 +1,3 @@
-using DG.Tweening;
 using Link;
 using System;
 using System.Collections;
@@ -66,24 +65,24 @@ namespace Hai.Cooking.NewTest
                 case State.Normal:
                     break;
                 case State.HeatOn:
-                    DOVirtual.DelayedCall(1f, () => { heatOn.SetActive(true); });
+                    heatOn.SetActive(true);
                     break;
                 case State.HaveOil:
-                    DOVirtual.DelayedCall(1f, () => {haveOil.SetActive(true);});
+                    haveOil.SetActive(true);
                     break;
                 case State.HaveGarlic:
-                    DOVirtual.DelayedCall(1f, () => {haveGarlic.SetActive(true);});
+                    haveGarlic.SetActive(true);
                     garlicDrop.OnActive();
                     break;
                 case State.HaveMeat:
-                    DOVirtual.DelayedCall(1f, () => {haveMeat.SetActive(true);});
+                    haveMeat.SetActive(true);
                     break;
                 case State.HaveOnion:
-                    DOVirtual.DelayedCall(1f, () => {haveOnion.SetActive(true);});
+                    haveOnion.SetActive(true);
                     onionDrop.OnActive();
                     break;
                 case State.HavePepper:
-                    DOVirtual.DelayedCall(1f, () => {havePepper.SetActive(true);});
+                    havePepper.SetActive(true);
                     ChangeState(State.Mixing);
                     break;
                 case State.Mixing:
@@ -111,27 +110,27 @@ namespace Hai.Cooking.NewTest
         {
             if (IsState(State.HeatOn) && spiceItem.IsSpiceType(SpiceType.Oil))
             {
-                return PouringSpiceItem(spiceItem, State.HaveOil, 0.9f);
+                return PouringSpiceItem(spiceItem, State.HaveOil, 1.2f);
             }
             if (IsState(State.HaveOil) && spiceItem.IsSpiceType(SpiceType.Garlic))
             {
-                return PouringSpiceItem(spiceItem, State.HaveGarlic, 0.9f);
+                return PouringSpiceItem(spiceItem, State.HaveGarlic, 1.2f);
             }
             if(IsState(State.HaveGarlic) && spiceItem.IsSpiceType(SpiceType.Meat))
             {
-                return PouringSpiceItem(spiceItem, State.HaveMeat, 0.9f);
+                return PouringSpiceItem(spiceItem, State.HaveMeat, 1.2f);
             }
             if(IsState(State.HaveMeat) && spiceItem.IsSpiceType(SpiceType.Onion))
             {
-                return PouringSpiceItem(spiceItem, State.HaveOnion, 0.9f);
+                return PouringSpiceItem(spiceItem, State.HaveOnion, 1.2f);
             }
             if(IsState(State.HaveOnion) && spiceItem.IsSpiceType(SpiceType.Salt))
             {
-                return PouringSpiceItem(spiceItem, State.HaveSalt, 0.6f);
+                return PouringSpiceItem(spiceItem, State.HaveSalt,1.2f);
             }
             if(IsState(State.HaveSalt) && spiceItem.IsSpiceType(SpiceType.Pepper))
             {
-                return PouringSpiceItem(spiceItem, State.HavePepper, 0.6f);
+                return PouringSpiceItem(spiceItem, State.HavePepper, 1.2f);
             }
             return false;
         }
