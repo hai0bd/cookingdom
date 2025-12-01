@@ -19,7 +19,11 @@ namespace Hai.Cooking.NewTest
         Click,
         PutDown,
         Take,
+        Button,
+        DoneSomething,
+        OilBoil,
+        OilPour,
+        SaltPouring,
         SpoonFry,
-        Button
     }
 }

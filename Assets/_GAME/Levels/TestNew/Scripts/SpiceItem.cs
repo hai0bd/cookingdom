@@ -15,9 +15,6 @@ namespace Hai.Cooking.NewTest
         [SerializeField] private State state;
         [SerializeField] private SpiceType spiceType;
 
-        //[SerializeField] private Animation anim;
-        //[SerializeField] private string animPouring;
-
         [SerializeField] private PouringAnim pouringAnim;
 
         public override bool IsCanMove => IsState(State.Normal);
@@ -68,9 +65,14 @@ namespace Hai.Cooking.NewTest
 
         private void StartPouring()
         {
-            //anim.Play(animPouring);
-            //SoundControl.Ins.PlayFX()
-            pouringAnim.PutUp();
+            if (spiceType == SpiceType.Salt || spiceType == SpiceType.Pepper)
+            {
+                pouringAnim.PutUp(Fx.SaltPouring);
+            }
+            else if (spiceType == SpiceType.Oil)
+            {
+                pouringAnim.PutUp(Fx.OilPour);
+            }
             StartCoroutine(WaitForPouring());
         }
 

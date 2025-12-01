@@ -26,8 +26,8 @@ namespace Hai.Cooking.NewTest
         [SerializeField] private ParticleSystem oilVFX;
         [SerializeField] private ParticleSystem smokeVFX;
 
-        [SerializeField] private Drop2D garlicDrop;
-        [SerializeField] private Drop2D onionDrop;
+        //[SerializeField] private Drop2D garlicDrop;
+        //[SerializeField] private Drop2D onionDrop;
 
         [SerializeField] private GameObject heatOn;
         [SerializeField] private GameObject haveOil;
@@ -72,14 +72,14 @@ namespace Hai.Cooking.NewTest
                     break;
                 case State.HaveGarlic:
                     haveGarlic.SetActive(true);
-                    garlicDrop.OnActive();
+                    //garlicDrop.OnActive();
                     break;
                 case State.HaveMeat:
                     haveMeat.SetActive(true);
                     break;
                 case State.HaveOnion:
                     haveOnion.SetActive(true);
-                    onionDrop.OnActive();
+                    //onionDrop.OnActive();
                     break;
                 case State.HavePepper:
                     havePepper.SetActive(true);
@@ -114,15 +114,15 @@ namespace Hai.Cooking.NewTest
             }
             if (IsState(State.HaveOil) && spiceItem.IsSpiceType(SpiceType.Garlic))
             {
-                return PouringSpiceItem(spiceItem, State.HaveGarlic, 1.2f);
+                return PouringSpiceItem(spiceItem, State.HaveGarlic, 2f);
             }
             if(IsState(State.HaveGarlic) && spiceItem.IsSpiceType(SpiceType.Meat))
             {
-                return PouringSpiceItem(spiceItem, State.HaveMeat, 1.2f);
+                return PouringSpiceItem(spiceItem, State.HaveMeat, 2f);
             }
             if(IsState(State.HaveMeat) && spiceItem.IsSpiceType(SpiceType.Onion))
             {
-                return PouringSpiceItem(spiceItem, State.HaveOnion, 1.2f);
+                return PouringSpiceItem(spiceItem, State.HaveOnion, 2f);
             }
             if(IsState(State.HaveOnion) && spiceItem.IsSpiceType(SpiceType.Salt))
             {
